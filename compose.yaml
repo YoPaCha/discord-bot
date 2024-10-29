@@ -1,0 +1,10 @@
+services:
+  discord-bot:
+    build:
+      context: . #Patht to dockerfile
+      dockerfile: Dockerfile
+    volumes:
+      - ./src/main.py:/app/src/main.py
+      - ./requirements.txt:/requirements.txt
+    env_file:
+      - .env
